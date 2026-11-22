@@ -33,6 +33,7 @@ jobs:
           node-version: "20"
 
       - name: Check Formatting
+        run: test -z "$(gofmt -l .)"
 
       - name: Generate
         run: go generate ./...
